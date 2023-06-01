@@ -6,15 +6,18 @@ on:
       - main
 
 jobs:
-  your_job_name:
+  TF-create:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Your Terraform Step
+      - name: TF-step-1-2-3
         run: |
+          pwd && ls
+          cd Terraform
+          pwd
           terraform init
           terraform plan -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
           #terraform apply -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
