@@ -57,6 +57,6 @@ resource "aws_security_group" "mysg" {
   }
 }
 
-output "instance_ips" {
-  value = aws_instance.example.*.public_ip
-}
+#output "instance_ips" {
+#  value = aws_instance.example.*.public_ip
+#}
