@@ -55,6 +55,9 @@ resource "aws_security_group" "mysg" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
+  tags = {
+    Name = "self-cloud-server"
+  }
 }
 
 #output "instance_ips" {
