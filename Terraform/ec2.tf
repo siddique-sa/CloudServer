@@ -1,16 +1,9 @@
 provider "aws" {
   region = "ap-south-1"  # Replace with your desired AWS region
-  access_key = var.access_key
-  secret_key = var.secret_key
+  access_key = "${var.access_key}"
+  secret_key = "${var.secret_key}"
 }
 
-variable "access_key" {
-  description = "AWS access key"
-}
-
-variable "secret_key" {
-  description = "AWS secret access key"
-}
 //////////////////////////creation starts
 
 resource "aws_instance" "myec2" {
@@ -59,7 +52,3 @@ resource "aws_security_group" "mysg" {
     Name = "self-cloud-server"
   }
 }
-
-#output "instance_ips" {
-#  value = aws_instance.example.*.public_ip
-#}
