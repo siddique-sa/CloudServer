@@ -1,3 +1,3 @@
 output "instance_ips" {
-  value = aws_instance.example.*.public_ip
+  value = aws_instance.myec2.*.public_ip
 }
