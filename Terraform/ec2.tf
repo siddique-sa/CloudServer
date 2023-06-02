@@ -1,16 +1,14 @@
 provider "aws" {
-  region = "ap-south-1"  # Replace with your desired AWS region
-  access_key = "${var.access_key}"
-  secret_key = "${var.secret_key}"
+  region = "ap-south-1"  
 }
 
-//////////////////////////creation starts
+//////////////////////////creation starts///
 
 resource "aws_instance" "myec2" {
-  ami           = "ami-0f5ee92e2d63afc18"  # Replace with your desired AMI ID  
+  ami           = "ami-0f5ee92e2d63afc18"   
   instance_type = "t2.nano"
   root_block_device {
-    volume_size = 8  # Replace with your desired root volume size (in GB)
+    volume_size = 8  
     volume_type = "gp2"
   }
 }
