@@ -24,7 +24,7 @@ jobs:
           terraform apply -auto-approve 
           #terraform destroy -auto-approve
 
-      - name: Set AWS Keys
+      - name: UnSet AWS Keys
         run: |
           unset AWS_ACCESS_KEY_ID
           unset AWS_SECRET_ACCESS_KEY
