@@ -29,14 +29,14 @@ jobs:
 
 
       - name: TF-step-1-2-3
-              run: |
-                pwd && ls
-                cd Terraform
-                pwd
-                terraform init
-                terraform plan -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
-                terraform apply -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
-                #terraform destroy -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
+        run: |
+          pwd && ls
+          cd Terraform
+          pwd
+          terraform init
+          terraform plan -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
+          terraform apply -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
+          #terraform destroy -auto-approve -var "access_key=${{ secrets.AWS_ACCESS_KEY }}" -var "secret_key=${{ secrets.AWS_SECRET_KEY }}"
 
       - name: Unset AWS credentials
         run: |
