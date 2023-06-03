@@ -11,6 +11,9 @@ resource "aws_instance" "myec2" {
     volume_size = 8  
     volume_type = "gp2"
   }
+    tags = {
+    Name = "self-cloud-server"
+  }
 }
 
 resource "aws_security_group" "mysg" {
@@ -47,6 +50,6 @@ resource "aws_security_group" "mysg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   tags = {
-    Name = "self-cloud-server"
+    Name = "self-cloud-server-sg"
   }
 }
