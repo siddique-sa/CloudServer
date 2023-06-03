@@ -13,8 +13,8 @@ resource "aws_s3_bucket" "mys3" {
 
 terraform {
   backend "s3" {
-    bucket = aws_s3_bucket.mys3.bucket
+    bucket = aws_s3_bucket.mys3.id
     key    = "s3/terraform.tfstate"
-    egion = "ap-south-1"
+    region = "ap-south-1"
   }
 }
