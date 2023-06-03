@@ -2,8 +2,8 @@ name: TF create/destroy
 
 on:
   #push:
-
   workflow_dispatch:
+    
 jobs:
   TF-create:
     runs-on: ubuntu-latest
