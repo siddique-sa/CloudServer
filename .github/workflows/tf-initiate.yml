@@ -18,10 +18,10 @@ jobs:
           export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_KEY }}
  
           chmod u+x Scripts/tf-apply.sh
-          sh Scripts/tf-apply.sh
+          #sh Scripts/tf-apply.sh
 
-          #chmod u+x Scripts/tf-destroy.sh
-          #sh Scripts/tf-destroy.sh
+          chmod u+x Scripts/tf-destroy.sh
+          sh Scripts/tf-destroy.sh
 
           unset AWS_ACCESS_KEY_ID
           unset AWS_SECRET_ACCESS_KEY
